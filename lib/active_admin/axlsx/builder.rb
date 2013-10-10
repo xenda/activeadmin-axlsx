@@ -156,7 +156,7 @@ module ActiveAdmin
       def export_collection(collection)
         header_row
         collection.each do |resource|
-          sheet.add_row resource_data(resource)
+          sheet.add_row resource_data(resource), , :types => [:string, :string, :string, :string, :string, nil, :string, :string, :string, :string, :string]
         end
       end
 
